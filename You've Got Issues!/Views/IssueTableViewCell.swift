@@ -15,11 +15,4 @@ class IssueTableViewCell: UITableViewCell {
     @IBOutlet var ClosedIssueTitle: UILabel!
     @IBOutlet var ClosedIssueUser: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 }

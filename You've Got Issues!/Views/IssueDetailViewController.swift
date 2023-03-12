@@ -11,6 +11,7 @@ class IssueDetailViewController: UIViewController {
     
     var passInData: Issue?
     var issueType: String?
+    
     @IBOutlet var gitTitle: UILabel!
     @IBOutlet var gitImage: UIImageView!
     @IBOutlet var gitAuthor: UILabel!
@@ -20,30 +21,13 @@ class IssueDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // formatting git title and passing data
         gitTitle.numberOfLines = 0
         gitTitle.lineBreakMode = NSLineBreakMode.byWordWrapping
         gitTitle.text = passInData?.title
         gitTitle.font = UIFont(name:"Georgia", size: 25.0)
         
-        let font1 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
-        let font2 = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
-        
-        let boldText = "Author: "
-        let attributedString = NSMutableAttributedString(string: boldText, attributes: font1)
-        let normalText = "\(passInData?.user ?? "")"
-        let normalString = NSMutableAttributedString(string: normalText, attributes: font2)
-        attributedString.append(normalString)
-        gitAuthor.attributedText = attributedString
-        
-        let boldText2 = "Date: "
-        let attributedString2 = NSMutableAttributedString(string: boldText2, attributes: font1)
-        let normalText2 = "\(passInData?.createdAt ?? "")"
-        let normalString2 = NSMutableAttributedString(string: normalText2, attributes: font2)
-        attributedString2.append(normalString2)
-        gitDate.attributedText = attributedString2
-        
-        gitDescription.text = passInData?.body
-        
+        // image to display based on issuetype
         if let type = issueType {
             if type == "open" {
                 gitImage.image = UIImage(systemName: "envelope.open.fill")
@@ -53,5 +37,28 @@ class IssueDetailViewController: UIViewController {
                 gitImage.tintColor = UIColor.systemGreen
             }
         }
+        
+        // formatting for author and date
+        let fontSizeBold = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+        let fontSize = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
+        
+        let boldText1 = "Author: "
+        let finalString1 = NSMutableAttributedString(string: boldText1, attributes: fontSizeBold)
+        let dataText1 = "\(passInData?.user ?? "")"
+        let dataString1 = NSMutableAttributedString(string: dataText1, attributes: fontSize)
+        finalString1.append(dataString1)
+        gitAuthor.attributedText = finalString1
+        
+        let boldText2 = "Date: "
+        let finalString2 = NSMutableAttributedString(string: boldText2, attributes: fontSizeBold)
+        let dataText2 = "\(passInData?.createdAt ?? "")"
+        let dataString2 = NSMutableAttributedString(string: dataText2, attributes: fontSize)
+        finalString2.append(dataString2)
+        gitDate.attributedText = finalString2
+        
+        // description
+        gitDescription.text = passInData?.body
+        
+        
     }
 }
