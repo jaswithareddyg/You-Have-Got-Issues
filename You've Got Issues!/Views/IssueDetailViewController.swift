@@ -48,6 +48,7 @@ class IssueDetailViewController: UIViewController {
         let dataString1 = NSMutableAttributedString(string: dataText1, attributes: fontSize)
         finalString1.append(dataString1)
         gitAuthor.attributedText = finalString1
+        //gitAuthor.font = UIFont(name:"Georgia", size: 18)
         
         let boldText2 = "Date: "
         let finalString2 = NSMutableAttributedString(string: boldText2, attributes: fontSizeBold)
@@ -55,6 +56,7 @@ class IssueDetailViewController: UIViewController {
         let dataString2 = NSMutableAttributedString(string: dataText2, attributes: fontSize)
         finalString2.append(dataString2)
         gitDate.attributedText = finalString2
+        //gitDate.font = UIFont(name:"Georgia", size: 18)
         
         // description
         gitDescription.text = passInData?.body
