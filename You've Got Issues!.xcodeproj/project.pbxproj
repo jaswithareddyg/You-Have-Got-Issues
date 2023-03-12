@@ -67,16 +67,24 @@
 				3610A1DA297F857B007DE7F1 /* AppDelegate.swift */,
 				3610A1DC297F857B007DE7F1 /* SceneDelegate.swift */,
 				3610A1F2297F8A02007DE7F1 /* GitHubClient.swift */,
-				3610A1F8297F8F24007DE7F1 /* IssueTableViewCell.swift */,
-				3610A1F0297F89BB007DE7F1 /* OpenIssueTableViewController.swift */,
-				3610A1F6297F8DE4007DE7F1 /* ClosedIssueTableViewController.swift */,
-				3610A1F4297F8B4D007DE7F1 /* IssueDetailViewController.swift */,
+				BC4EF42529BD884100C87C99 /* Views */,
 				3610A1E0297F857B007DE7F1 /* Main.storyboard */,
 				3610A1E3297F857C007DE7F1 /* Assets.xcassets */,
 				3610A1E5297F857C007DE7F1 /* LaunchScreen.storyboard */,
 				3610A1E8297F857C007DE7F1 /* Info.plist */,
 			);
 			path = "You've Got Issues!";
+			sourceTree = "<group>";
+		};
+		BC4EF42529BD884100C87C99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3610A1F8297F8F24007DE7F1 /* IssueTableViewCell.swift */,
+				3610A1F0297F89BB007DE7F1 /* OpenIssueTableViewController.swift */,
+				3610A1F6297F8DE4007DE7F1 /* ClosedIssueTableViewController.swift */,
+				3610A1F4297F8B4D007DE7F1 /* IssueDetailViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
