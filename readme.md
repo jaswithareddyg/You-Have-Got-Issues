@@ -49,4 +49,9 @@ You've Got Issues (Swift) is an iOS application that allows users to view both o
   - [Stack Overflow](https://stackoverflow.com/questions/24475792/how-to-use-pull-to-refresh-in-swift)
   - [Cocoa Casts](https://cocoacasts.com/how-to-add-pull-to-refresh-to-a-table-view-or-collection-view)
 
+## Additional Information
+
+- This project was developed using Xcode and Swift.
+- For issues or questions, contact [(Jas) Jaswitha](mailto:jaswithareddyguntaka@gmail.com).
+
 Enjoy exploring GitHub issues with the GitHub Issue Viewer app! 🚀
